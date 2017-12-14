@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>BWF App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Best Wine Friends</h1>
+      <h3>Which wines are best friends with your food?</h3>
+    </header>
+    <main>
+      <div class="form">
+        <form>
+          <div class="main-dish">
+              <label>Main Ingredient</label>
+              <select>
+                <option value="">What are you cooking?</option>
+              </select>
+          </div>
+          <div class="flavor-profile">
+              <label>Flavor Profile</label>
+              <select>
+                <option value="">Select Your Main Ingredient First</option>
+              </select>
+              <p class="profile-description"></p>
+          </div>
+          <div class="button">
+            <button type="submit" class="submit">Find Your BWF</button>
+          </div>
+        </form>
+      </div>
+      <div class="result">
+        <div class="images">
+          <div class="main-dish-img img"></div>
+          <div class="plus img hidden"><img src="assets/plus.png"/></div>
+          <div class="flavor-profile-img img"></div>
+          <div class="equals img hidden"><img src="assets/equal.png"/></div>
+          <div class="wine-img img"></div>
+        </div>
+        <div class="wine=pairing"></div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>

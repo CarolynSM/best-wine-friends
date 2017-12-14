@@ -1,0 +1,21 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "P2 Wine Pairing App",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Carolyn Selheim-Miller",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5"
+  }
+}
