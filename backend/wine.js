@@ -1,130 +1,52 @@
-var winePairings = [
+var wine = [
   {
     wine: "Albariño",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [2, 3]
-    }]
+    pairings: [2, 3]
   }, {
     wine: "Beaujolais",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [3]
-    }],
+    pairings: [3]
   }, {
     wine: "Cabernet Sauvignon",
-    pairings: [{
-      ingredientId: 5,
-      flavors: [3]
-    }],
+    pairings: [16]
   }, {
     wine: "Cava",
-    pairings: [{
-      ingredientId: 2,
-      flavors: [2]
-    }],
+    pairings: [6]
   }, {
     wine: "Côtes de Provence Rosé",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [1]
-    }, {
-      ingredientId: 3,
-      flavors: [3],
-    }]
+    pairings: [1, 10]
   }, {
     wine: "Malbec",
-    pairings: [{
-      ingredientId: 3,
-      flavors: [1]
-    }, {
-      ingredientId: 4,
-      flavors: [1]
-    }, {
-      ingredientId: 5,
-      flavors: [1, 2],
-    }]
+    pairings: [8, 11, 14, 15]
   }, {
     wine: "Oaked Chardonney",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [1]
-    }, {
-      ingredientId: 2,
-      flavors: [1]
-    }, {
-      ingredientId: 4,
-      flavors: [2]
-    }]
+    pairings: [1, 5, 12]
   }, {
     wine: "Pinot Grigio",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [2]
-    }, {
-      ingredientId: 2,
-      flavors: [3]
-    }]
+    pairings: [2, 7]
   }, {
     wine: "Pinot Noir",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [1]
-    }, {
-      ingredientId: 2,
-      flavors: [1]
-    }, {
-      ingredientId: 3,
-      flavors: [2]
-    }, {
-      ingredientId: 4,
-      flavors: [3]
-    }]
+    pairings: [1, 5 ,9, 13]
   }, {
     wine: "Riesling",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [3]
-    }]
+    pairings: [3]
   }, {
     wine: "Sauvignon Blanc",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [4]
-    }, {
-      ingredientId: 2,
-      flavors: [2, 3]
-    }]
+    pairings: [4, 6, 7]
   }, {
     wine: "Syrah",
-    pairings: [{
-      ingredientId: 5,
-      flavors: [1]
-    }]
+    pairings: [14]
   }, {
     wine: "Tempranillo",
-    pairings: [{
-      ingredientId: 5,
-      flavors: [1, 3]
-    }]
+    pairings: [14, 16]
   }, {
     wine: "Un-oaked Chardonney",
-    pairings: [{
-      ingredientId: 1,
-      flavors: [2]
-    }]
+    pairings: [2]
   }, {
     wine: "Zinfandel",
-    pairings: [{
-      ingredientId: 3,
-      flavors: [1, 2]
-    }, {
-      ingredientId: 4,
-      flavors: [1]
-    }]
+    pairings: [8, 9, 11, 15]
   }
 ];
 
 module.exports = {
-  winePairings
+  wine
 };

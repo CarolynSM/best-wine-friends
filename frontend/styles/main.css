@@ -11,7 +11,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, select, input {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -50,7 +50,7 @@ main {
   justify-content: center;
 }
 
-form, .main-dish, .flavor-profile, .button {
+form, .main-dish, .flavor-profile, .button, .suggestion {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -66,6 +66,14 @@ form, .main-dish, .flavor-profile, .button {
 
 select {
   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  margin: 0.5em;
+  width: 268px;
+}
+
+.wine-suggestion {
   border: 1px solid #ccc;
   font-size: 16px;
   height: 34px;
@@ -91,4 +99,8 @@ select {
 .images {
   display: flex;
   flex-direction: row;
+}
+
+footer {
+  text-align: center;;
 }
