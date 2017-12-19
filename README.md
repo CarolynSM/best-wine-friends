@@ -1,2 +1,2 @@
-# Best Wine Friends
-Best Wine Friends: Which Wines are Best Friends with Your Food? (Wine pairing app!)
+# Best Wine Friends (Wine pairing app!)
+## Best Wine Friends: Which Wines are Best Friends with Your Food? 
