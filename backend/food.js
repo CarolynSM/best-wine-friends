@@ -13,7 +13,7 @@ var food = [
     id: 3,
     ingredient: "Poultry",
     flavors: [1, 2, 3],
-    imgSrc: "assets/Poultry"
+    imgSrc: "assets/Poultry.png"
   }, {
     id: 4,
     ingredient: "Pork",

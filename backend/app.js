@@ -46,7 +46,8 @@ app.get("/food-flavors", function(request, response) {
 });
 
 app.post("/wine", (request, response) => {
-  wine.push(request);
+  wine.push(request.body);
+  response.json("Your suggestion was added!");
 });
 
 app.listen(process.env.PORT || 3000);

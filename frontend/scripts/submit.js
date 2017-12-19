@@ -4,15 +4,13 @@ var mainIngredient = document.querySelector("#main-ingredient");
 var flavorProfile = document.querySelector("#flavor-profile");
 var foodAndFlavors = [];
 var button = document.querySelector(".submit");
-var pairingDiv = document.querySelector(".wine-pairing");
-var mainImg = document.querySelector(".main-dish-img");
+var formDiv = document.querySelector(".form");
 
 fetch(foodAndFlavorsUrl)
   .then(response => {
     return response.json();
   })
   .then(response => {
-    console.log(response);
     response.forEach(ingredient => {
       var option = document.createElement("option");
       option.id = ingredient.imgSrc;
@@ -35,4 +33,28 @@ mainIngredient.addEventListener("change", function(event) {
       });
     }
   }
+});
+
+button.addEventListener("click", function(event) {
+  event.preventDefault();
+  var currentFlavorId = flavorProfile.options[flavorProfile.selectedIndex].id;
+  fetch(wineUrl, {
+    method: "POST",
+    headers: new Headers({
+      "Content-Type": "application/json"
+    }),
+    body: JSON.stringify({
+      wine: document.querySelector(".wine-suggestion").value,
+      pairings: [currentFlavorId]
+    })
+  })
+    .then(response => response.json())
+    .then(response => {
+      console.log(response);
+      document.querySelector("form").className = "hidden";
+      var p = document.createElement("p");
+      p.innerHTML = response;
+      formDiv.appendChild(p);
+    })
+    .catch(err => console.log(err));
 });

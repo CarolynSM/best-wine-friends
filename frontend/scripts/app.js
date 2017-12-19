@@ -25,6 +25,7 @@ fetch(foodAndFlavorsUrl)
 mainIngredient.addEventListener("change", function(event) {
   flavorProfile.options.length = 0;
   var currentIngredient = mainIngredient.options[mainIngredient.selectedIndex].value;
+  console.log(mainIngredient.options[mainIngredient.selectedIndex].id);
   for(var i=0; i<foodAndFlavors.length; i++) {
     if(currentIngredient == foodAndFlavors[i].ingredient) {
       foodAndFlavors[i].flavors.forEach(flavor => {
@@ -46,8 +47,6 @@ function matchWineToFlavor(wine, flavorId) {
     }
   });
 }
-
-
 
 button.addEventListener("click", function(event) {
   event.preventDefault();
