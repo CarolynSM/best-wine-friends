@@ -6,6 +6,7 @@ var foodAndFlavors = [];
 var button = document.querySelector(".submit");
 var pairingDiv = document.querySelector(".wine-pairing");
 var mainImg = document.querySelector(".main-dish-img");
+var flavorImg = document.querySelector(".flavor-profile-img");
 
 fetch(foodAndFlavorsUrl)
   .then(response => {
@@ -23,19 +24,27 @@ fetch(foodAndFlavorsUrl)
   });
 
 mainIngredient.addEventListener("change", function(event) {
-  flavorProfile.options.length = 0;
+  flavorProfile.options.length = 1;
   var currentIngredient = mainIngredient.options[mainIngredient.selectedIndex].value;
-  console.log(mainIngredient.options[mainIngredient.selectedIndex].id);
+  mainImg.src = mainIngredient.options[mainIngredient.selectedIndex].id;
+  document.querySelector(".plus").className = "plus img";
   for(var i=0; i<foodAndFlavors.length; i++) {
     if(currentIngredient == foodAndFlavors[i].ingredient) {
       foodAndFlavors[i].flavors.forEach(flavor => {
         var option = document.createElement("option");
         option.id = flavor.flavorId;
+        option.className = flavor.imgSrc;
         option.innerHTML = flavor.profile;
         flavorProfile.appendChild(option);
       });
     }
   }
+});
+
+flavorProfile.addEventListener("change", function(event) {
+  var currentFlavor = flavorProfile.options[flavorProfile.selectedIndex].className;
+  flavorImg.src = currentFlavor;
+  document.querySelector(".equals").className = "equals img";
 });
 
 function matchWineToFlavor(wine, flavorId) {
