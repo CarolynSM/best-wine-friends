@@ -1,5 +1,5 @@
-var foodAndFlavorsUrl = "http://best-wine-friends.herokuapp.com/food-flavors";
-var wineUrl = "http://best-wine-friends.herokuapp.com/wine";
+var foodAndFlavorsUrl = "https://best-wine-friends.herokuapp.com/food-flavors";
+var wineUrl = "https://best-wine-friends.herokuapp.com/wine";
 var mainIngredient = document.querySelector("#main-ingredient");
 var flavorProfile = document.querySelector("#flavor-profile");
 var foodAndFlavors = [];
@@ -25,6 +25,7 @@ fetch(foodAndFlavorsUrl)
 
 mainIngredient.addEventListener("change", function(event) {
   flavorProfile.options.length = 1;
+  mainImg.classList.remove("hidden");
   var currentIngredient = mainIngredient.options[mainIngredient.selectedIndex].value;
   mainImg.src = mainIngredient.options[mainIngredient.selectedIndex].id;
   document.querySelector(".plus").className = "plus img";
@@ -42,6 +43,7 @@ mainIngredient.addEventListener("change", function(event) {
 });
 
 flavorProfile.addEventListener("change", function(event) {
+  flavorImg.classList.remove("hidden");
   var currentFlavor = flavorProfile.options[flavorProfile.selectedIndex].className;
   flavorImg.src = currentFlavor;
   document.querySelector(".equals").className = "equals img";

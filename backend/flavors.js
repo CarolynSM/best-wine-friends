@@ -16,7 +16,7 @@ var flavors = [
     ingredientId: 1,
     profile: "Spicy",
     description: "chili pepper and heat",
-    imgSrc: "Spicy.png"
+    imgSrc: "assets/Spicy.png"
   }, {
     flavorId: 4,
     ingredientId: 1,

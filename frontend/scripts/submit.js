@@ -1,5 +1,5 @@
-var foodAndFlavorsUrl = "http://best-wine-friends.herokuapp.com/food-flavors";
-var wineUrl = "http://best-wine-friends.herokuapp.com/wine";
+var foodAndFlavorsUrl = "https://best-wine-friends.herokuapp.com/food-flavors";
+var wineUrl = "https://best-wine-friends.herokuapp.com/wine";
 var mainIngredient = document.querySelector("#main-ingredient");
 var flavorProfile = document.querySelector("#flavor-profile");
 var foodAndFlavors = [];
@@ -53,6 +53,7 @@ button.addEventListener("click", function(event) {
       console.log(response);
       document.querySelector("form").className = "hidden";
       var p = document.createElement("p");
+      p.className = "response";
       p.innerHTML = response;
       formDiv.appendChild(p);
     })
